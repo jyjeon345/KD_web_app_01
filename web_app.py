@@ -30,7 +30,7 @@ st.markdown("""
     h3 {
         font-size: 1.2rem !important;
         font-weight: 700 !important;
-        color: #2c3e50 !important;
+        color: #1a1a1a !important;
         margin-top: 1.8rem !important;
         border-left: 4px solid #1f77b4;
         padding-left: 12px !important;
@@ -40,21 +40,21 @@ st.markdown("""
     h4 {
         font-size: 1.0rem !important;
         font-weight: 600 !important;
-        color: #444 !important;
+        color: #1a1a1a !important;
     }
 
     /* 일반 텍스트 및 라벨 */
     .stTextArea label p, .stMarkdown p, p {
         font-size: 0.95rem !important;
         font-weight: 400 !important;
-        color: #555 !important;
+        color: #1a1a1a !important;
     }
 
     /* 결과 숫자 (Metric Value) */
     [data-testid="stMetricValue"] {
         font-size: 1.5rem !important;
         font-weight: 700 !important;
-        color: #1f77b4 !important;
+        color: #1a1a1a !important;
         font-weight: 600 !important;
     }
 
@@ -63,7 +63,7 @@ st.markdown("""
         font-size: 0.85rem !important;
         font-weight: 500 !important;
         text-transform: uppercase;
-        color: #777 !important;
+        color: #1a1a1a !important;
         font-weight: 800 !important;
     }
 
@@ -127,4 +127,5 @@ if analyze_btn:
         st.error(f"데이터 형식을 다시 확인해 주세요: {e}")
 else:
     st.info("데이터를 입력하고 '분석 및 그래프 생성' 버튼을 클릭해 주세요.")
+
 
