@@ -19,7 +19,7 @@ st.markdown("""
 
     /* 1. 입력창 내부 '텍스트' 수직/가로 중앙 정렬 (수정됨) */
     textarea {
-        text-align: center !important; /* 가로 중앙 */
+        text-align: left !important; /* 가로 중앙 */
         height: 100px !important; /* 높이를 100px로 고정 */
         /* 상하 패딩을 이용해 텍스트를 수직 중앙으로 배치 */
         padding-top: 38px !important; 
@@ -40,7 +40,7 @@ st.markdown("""
     [data-testid="stMetric"] {
         display: flex;
         flex-direction: column;
-        align-items: center; /* 가로 중앙 */
+        align-items: left; /* 가로 중앙 */
         justify-content: center; /* 세로 중앙 */
         text-align: center;
     }
@@ -101,4 +101,5 @@ if analyze_btn:
 
     except Exception as e:
         st.error(f"오류 발생: {e}")
+
 
