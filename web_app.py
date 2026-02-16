@@ -55,6 +55,7 @@ st.markdown("""
         font-size: 1.5rem !important;
         font-weight: 700 !important;
         color: #1f77b4 !important;
+        font-weight: 600 !important;
     }
 
     /* 결과 라벨 (Metric Label) */
@@ -63,6 +64,7 @@ st.markdown("""
         font-weight: 500 !important;
         text-transform: uppercase;
         color: #777 !important;
+        font-weight: 800 !important;
     }
 
     header {visibility: hidden;} 
@@ -125,3 +127,4 @@ if analyze_btn:
         st.error(f"데이터 형식을 다시 확인해 주세요: {e}")
 else:
     st.info("데이터를 입력하고 '분석 및 그래프 생성' 버튼을 클릭해 주세요.")
+
