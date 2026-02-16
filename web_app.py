@@ -15,8 +15,8 @@ st.markdown("""
     .block-container { padding-top: 1rem; max-width: 900px; margin: 0 auto; }
 
     /* 타이틀 및 섹션 제목 (왼쪽 맞춤으로 통일) */
-    h2 { font-size: 1.5rem !important; font-weight: 800 !important; text-align: left; margin-bottom: 1rem !important; }
-    h3 { font-size: 1.15rem !important; font-weight: 700 !important; text-align: left; margin-top: 1.5rem !important; margin-bottom: 1rem !important; }
+    h2 { font-size: 1.5rem !important; font-weight: 800 !important; text-align: center; margin-bottom: 1rem !important; }
+    h3 { font-size: 1.15rem !important; font-weight: 700 !important; text-align: center; margin-top: 1.5rem !important; margin-bottom: 1rem !important; }
 
     /* 1. 입력창 라벨: 굵은 글씨 + 왼쪽 맞춤 */
     .stTextArea label p {
@@ -127,3 +127,4 @@ if analyze_btn:
 
     except Exception as e:
         st.error(f"오류 발생: {e}")
+
