@@ -17,14 +17,15 @@ st.markdown("""
     /* h2 타이틀 중앙 정렬 */
     h2 { font-size: 1.6rem !important; font-weight: 800 !important; text-align: center; margin-bottom: 1.5rem !important; }
 
-    /* 1. 입력창 내부 '텍스트' 수직 중앙 정렬 */
+    /* 1. 입력창 내부 '텍스트' 수직/가로 중앙 정렬 (수정됨) */
     textarea {
-        text-align: center !important;
-        display: flex !important;
-        align-items: center !important; /* 수직 중앙 */
-        justify-content: center !important; /* 가로 중앙 */
-        padding-top: 35px !important; /* 높이가 100px일 때 글자를 중앙으로 밀어내기 위한 조정 */
-        line-height: 1.5 !important;
+        text-align: center !important; /* 가로 중앙 */
+        height: 100px !important; /* 높이를 100px로 고정 */
+        /* 상하 패딩을 이용해 텍스트를 수직 중앙으로 배치 */
+        padding-top: 38px !important; 
+        padding-bottom: 0px !important;
+        line-height: 1.2 !important; /* 줄 간격 */
+        resize: none; /* (선택) 사용자가 크기 조절 못하게 고정 */
     }
 
     /* 2. 입력창 '라벨' 수직/가로 중앙 정렬 */
@@ -100,3 +101,4 @@ if analyze_btn:
 
     except Exception as e:
         st.error(f"오류 발생: {e}")
+
