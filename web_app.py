@@ -45,7 +45,7 @@ st.markdown("""
         text-align: center;
     }
 
-    [data-testid="stMetricValue"] { font-size: 0.8rem !important; font-weight: 400 !important; line-height: 1.2 !important; }
+    [data-testid="stMetricValue"] { font-size: 1.0rem !important; font-weight: 400 !important; line-height: 1.2 !important; }
     [data-testid="stMetricLabel"] p { font-size: 1.2rem !important; font-weight: 800 !important; margin-bottom: 0.5 !important; }
 
     header {visibility: hidden;} 
@@ -101,6 +101,7 @@ if analyze_btn:
 
     except Exception as e:
         st.error(f"오류 발생: {e}")
+
 
 
 
