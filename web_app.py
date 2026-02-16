@@ -40,13 +40,13 @@ st.markdown("""
     [data-testid="stMetric"] {
         display: flex;
         flex-direction: column;
-        align-items: left; /* 가로 중앙 */
+        align-items: center; /* 가로 중앙 */
         justify-content: center; /* 세로 중앙 */
         text-align: center;
     }
 
-    [data-testid="stMetricValue"] { font-size: 1.5rem !important; font-weight: 700 !important; line-height: 1.2 !important; }
-    [data-testid="stMetricLabel"] p { font-size: 0.85rem !important; margin-bottom: 0 !important; }
+    [data-testid="stMetricValue"] { font-size: 1.5rem !important; font-weight: 400 !important; line-height: 1.2 !important; }
+    [data-testid="stMetricLabel"] p { font-size: 1.5rem !important; ont-weight: 700 !important; margin-bottom: 0.5 !important; }
 
     header {visibility: hidden;} 
     footer {visibility: hidden;}
@@ -101,5 +101,6 @@ if analyze_btn:
 
     except Exception as e:
         st.error(f"오류 발생: {e}")
+
 
 
