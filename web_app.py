@@ -14,10 +14,10 @@ st.markdown("""
     html, body, [class*="css"] { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
     .block-container { padding-top: 1rem; padding-bottom: 0rem; max-width: 900px; }
     [data-testid="stMetricValue"] { font-size: 1.8rem !important; }
-    header {visibility: hidden;} /* 스트림릿 헤더 숨김 */
-    footer {visibility: hidden;} /* 스트림릿 푸터 숨김 */
+    header {visibility: hidden;} 
+    footer {visibility: hidden;} 
     </style>
-    """, unsafe_allow_status=True)
+    """, unsafe_allow_html=True) # <- 'html'로 고쳐주세요!
 
 # 2. 사이드바 설정
 st.sidebar.header("📊 Data Input")
@@ -64,3 +64,4 @@ if st.sidebar.button("Analyze Now"):
         st.error(f"Error: {e}")
 else:
     st.write("⬅️ 왼쪽 바에 데이터를 입력하고 분석 버튼을 눌러주세요.")
+
