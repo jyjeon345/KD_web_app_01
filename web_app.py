@@ -19,16 +19,16 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-st.title("🧪 Kd Analysis Tool")
+st.title("🧪 KD Analysis Tool")
 
 # 2. 메인 화면에 입력창 배치 (사이드바 대신)
 st.subheader("1. 데이터 입력")
 col_in1, col_in2 = st.columns(2)
 
 with col_in1:
-    x_raw = st.text_area("농도 (Concentrations, 쉼표 구분)", "0, 0.5, 1, 2, 5, 10, 20, 50, 100", height=100)
+    x_raw = st.text_area("농도 (Concentrations, 쉼표 구분)", "0, 0.5, 1, 2, 5, 10, 20, 50, 100", height=80)
 with col_in2:
-    y_raw = st.text_area("시그널 강도 (Signals, 쉼표 구분)", "0, 0.12, 0.21, 0.38, 0.62, 0.81, 0.92, 0.98, 1.02", height=100)
+    y_raw = st.text_area("시그널 강도 (Signals, 쉼표 구분)", "0, 0.12, 0.21, 0.38, 0.62, 0.81, 0.92, 0.98, 1.02", height=80)
 
 analyze_btn = st.button("🚀 데이터 분석 시작", use_container_width=True)
 
@@ -51,7 +51,7 @@ if analyze_btn:
         # 결과 수치 (3열 배치)
         st.subheader("2. 분석 결과")
         m1, m2, m3 = st.columns(3)
-        m1.metric("Kd (해리 상수)", f"{kd_fit:.4f}")
+        m1.metric("KD (해리 상수)", f"{kd_fit:.4f}")
         m2.metric("Bmax (최대 결합)", f"{bmax_fit:.4f}")
         m3.metric("R² (정확도)", f"{r_squared:.3f}")
 
@@ -73,3 +73,4 @@ if analyze_btn:
         st.error(f"입력 데이터를 확인해 주세요: {e}")
 else:
     st.info("위의 입력창에 데이터를 넣고 버튼을 누르면 그래프가 여기에 나타납니다.")
+
