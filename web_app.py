@@ -10,12 +10,32 @@ st.set_page_config(page_title="Kd Analyzer", layout="wide")
 # CSS: 워드프레스 환경에 맞춰 여백 최적화
 st.markdown("""
     <style>
+    /* 1. 메인 타이틀 (KD Analysis Tool) 크기 조절 */
+    h1 {
+        font-size: 1.8rem !important;  /* 기본값보다 작게 조절 */
+        font-weight: 700 !important;
+        color: #31333F !important;
+        padding-bottom: 0.5rem !important;
+    }
+
+    /* 2. 소제목 (1. 데이터 입력, 2. 분석 결과) 크기 조절 */
+    h3 {
+        font-size: 1.3rem !important;  /* 타이틀보다 약간 작게 */
+        margin-top: 1.5rem !important;
+        color: #262730 !important;
+    }
+
+    /* 3. 입력창 라벨 (농도, 시그널 강도) 폰트 조절 */
+    .stTextArea label p {
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+    }
+
+    /* 기존 워드프레스 최적화 코드 유지 */
     html, body, [class*="css"] { font-family: sans-serif; }
     .block-container { padding-top: 1rem; padding-bottom: 1rem; max-width: 900px; }
     header {visibility: hidden;} 
     footer {visibility: hidden;}
-    /* 입력창 레이아웃 조정 */
-    div[data-testid="stVerticalBlock"] > div:has(div.stExpander) { border: none; }
     </style>
     """, unsafe_allow_html=True)
 
@@ -73,4 +93,5 @@ if analyze_btn:
         st.error(f"입력 데이터를 확인해 주세요: {e}")
 else:
     st.info("위의 입력창에 데이터를 넣고 버튼을 누르면 그래프가 여기에 나타납니다.")
+
 
